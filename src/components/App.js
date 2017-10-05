@@ -105,16 +105,16 @@ export default () => (
             <Box width={[1, 1/4]} px={3}>
               <Heading thin mb={2} element="h5" fontSize={4}>Contact</Heading>
               <Text m={0} fontSize={1} color={`bleech`} opacity={.5}>Your address here</Text>
-              <Button primary component={Link} to={`${baseUrl}/contact`}>{text.actions.contact}</Button>
+              <Button primary component={Link} to={`/contact`}>{text.actions.contact}</Button>
             </Box>
 
             <Box width={[1, 1/4]} px={3}>
               <Heading thin mb={2} element="h5" fontSize={4}>True stories</Heading>
               <Box width={1} pb={1}>
-                <Link to={`${baseUrl}/`} color={`ocean`}>Een blog link hier</Link>
+                <Link to={`/`} color={`ocean`}>Een blog link hier</Link>
               </Box>
               <Box width={1} pb={1}>
-                <Link to={`${baseUrl}/`} color={`ocean`}>En een blog link daar</Link>
+                <Link to={`/`} color={`ocean`}>En een blog link daar</Link>
               </Box>
             </Box>
 
