@@ -90,7 +90,7 @@ export default () => (
 
         <Content width={1}>
 
-          <Route exact path={`${baseUrl}/`} component={Home} />
+          <Route exact path={`${baseUrl}`} component={Home} />
           <Route path={`${baseUrl}/over-ons`} component={About} />
           <Route path={`${baseUrl}/wat-we-doen`} component={What} />
           <Route path={`${baseUrl}/hoe-wij-het-doen`} component={How} />
