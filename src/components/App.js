@@ -23,6 +23,8 @@ import text from '../data/texts'
 
 const baseUrl = process.env.PUBLIC_URL
 
+console.log('baseUrl', baseUrl, process.env)
+
 injectGlobal([`
   body {
     margin: 0;
