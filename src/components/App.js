@@ -23,8 +23,6 @@ import text from '../data/texts'
 
 const baseUrl = process.env.PUBLIC_URL
 
-console.log('baseUrl', baseUrl, process.env)
-
 injectGlobal([`
   body {
     margin: 0;
@@ -91,7 +89,7 @@ export default () => (
         </Navbar>
 
         <Content width={1}>
-
+{ console.log('baseUrl', baseUrl, process.env) }
           <Route exact path={`${baseUrl}`} component={Home} />
           <Route path={`${baseUrl}/over-ons`} component={About} />
           <Route path={`${baseUrl}/wat-we-doen`} component={What} />
