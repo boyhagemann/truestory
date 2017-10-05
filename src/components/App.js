@@ -21,6 +21,8 @@ import Contact from '../pages/Contact'
 import TrueStoryLogo from '../assets/images/true story communicatie logo 01.png'
 import text from '../data/texts'
 
+const baseUrl = process.env.PUBLIC_URL
+
 injectGlobal([`
   body {
     margin: 0;
@@ -52,12 +54,12 @@ const LogoContainer = styled.div`
 `
 
 const links = [
-  { label: 'Home', to: '/'},
-  { label: 'Wat doen we?', to: '/wat-we-doen'},
-  { label: 'Hoe dan?', to: '/hoe-wij-het-doen'},
-  { label: 'True stories', to: '/true-stories'},
-  { label: 'Over ons', to: '/over-ons'},
-  { label: 'Contact', to: '/contact'},
+  { label: 'Home', to: `${baseUrl}`},
+  { label: 'Wat doen we?', to: `${baseUrl}/wat-we-doen`},
+  { label: 'Hoe dan?', to: `${baseUrl}/hoe-wij-het-doen`},
+  { label: 'True stories', to: `${baseUrl}/true-stories`},
+  { label: 'Over ons', to: `${baseUrl}/over-ons`},
+  { label: 'Contact', to: `${baseUrl}/contact`},
 ]
 
 
@@ -88,13 +90,13 @@ export default () => (
 
         <Content width={1}>
 
-          <Route exact path={`/`} component={Home} />
-          <Route path={`/over-ons`} component={About} />
-          <Route path={`/wat-we-doen`} component={What} />
-          <Route path={`/hoe-wij-het-doen`} component={How} />
-          <Route exact path={`/true-stories`} component={Stories} />
-          <Route path={`/true-stories/:slug`} component={Story} />
-          <Route path={`/contact`} component={Contact} />
+          <Route exact path={`${baseUrl}/`} component={Home} />
+          <Route path={`${baseUrl}/over-ons`} component={About} />
+          <Route path={`${baseUrl}/wat-we-doen`} component={What} />
+          <Route path={`${baseUrl}/hoe-wij-het-doen`} component={How} />
+          <Route exact path={`${baseUrl}/true-stories`} component={Stories} />
+          <Route path={`${baseUrl}/true-stories/:slug`} component={Story} />
+          <Route path={`${baseUrl}/contact`} component={Contact} />
 
         </Content>
 
@@ -104,16 +106,16 @@ export default () => (
             <Box width={[1, 1/4]} px={3}>
               <Heading thin mb={2} element="h5" fontSize={4}>Contact</Heading>
               <Text m={0} fontSize={1} color={`bleech`} opacity={.5}>Your address here</Text>
-              <Button primary component={Link} to={`/contact`}>{text.actions.contact}</Button>
+              <Button primary component={Link} to={`${baseUrl}/contact`}>{text.actions.contact}</Button>
             </Box>
 
             <Box width={[1, 1/4]} px={3}>
               <Heading thin mb={2} element="h5" fontSize={4}>True stories</Heading>
               <Box width={1} pb={1}>
-                <Link to={`/`} color={`ocean`}>Een blog link hier</Link>
+                <Link to={`${baseUrl}/`} color={`ocean`}>Een blog link hier</Link>
               </Box>
               <Box width={1} pb={1}>
-                <Link to={`/`} color={`ocean`}>En een blog link daar</Link>
+                <Link to={`${baseUrl}/`} color={`ocean`}>En een blog link daar</Link>
               </Box>
             </Box>
 

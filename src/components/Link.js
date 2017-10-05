@@ -3,6 +3,8 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import { space, width, fontSize, color, removeProps } from 'styled-system'
 
+const baseUrl = process.env.PUBLIC_URL
+
 const colorHover = props => color({ ...props, color: props.hoverColor })
 
 const PureLink = ({ hoverColor, ...props }) => <Link { ...removeProps(props) } />
@@ -24,4 +26,4 @@ const StyledLink = styled(PureLink)`
   }
 `
 
-export default props => <StyledLink color={`storm`} { ...props } />
+export default ({ to, ...props }) => <StyledLink to={`${baseUrl}${to}`} color={`storm`} { ...props } />
