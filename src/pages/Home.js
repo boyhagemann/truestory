@@ -13,6 +13,7 @@ import Products from '../components/Products'
 import Philosophy from '../components/Philosophy'
 import CallToAction from '../components/CallToAction'
 import typewriter from '../assets/images/typewriter-801921_1920.jpg'
+// import write from '../assets/images/write-593333_1920.jpg'
 import text from '../data/texts'
 import Rick from '../assets/images/Rick-van-Leeuwen-1_10.jpg'
 
@@ -34,7 +35,7 @@ export default () => (
         </Box>
         <Box width={200}>
           <Heading element="h5" mt={4} mb={0} fontSize={4} color={'ocean'}>Rick van Leeuwen</Heading>
-          <Text m={0} fontSize={3} color={'bleech'}>Eigenaar</Text>
+          <Text m={0} fontSize={3} color={'bleech'}>Lamzak</Text>
         </Box>
       </Box>
     </Visual>
