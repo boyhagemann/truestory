@@ -7,7 +7,6 @@ const StyledAvatar = Box.extend`
   border-radius: 100%;
   text-align: center;
   vertical-align: center;
-  ${ props => console.log(props)}
   line-height: ${ props => props.size - (props.fs / 2) }px;
   width: ${ props => props.size }px;
   height: ${ props => props.size }px;

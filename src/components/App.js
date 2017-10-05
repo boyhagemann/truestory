@@ -89,7 +89,6 @@ export default () => (
         </Navbar>
 
         <Content width={1}>
-{ console.log('baseUrl', baseUrl, process.env) }
           <Route exact path={`${baseUrl}`} component={Home} />
           <Route path={`${baseUrl}/over-ons`} component={About} />
           <Route path={`${baseUrl}/wat-we-doen`} component={What} />
