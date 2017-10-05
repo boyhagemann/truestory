@@ -9,6 +9,7 @@ import Text from './Text'
 import Button from './Button'
 import Avatar from './Avatar'
 import defaultTheme from '../themes/default'
+import ScrollToTop from './ScrollToTop'
 
 import Home from '../pages/Home'
 import About from '../pages/About'
@@ -22,6 +23,8 @@ import TrueStoryLogo from '../assets/images/true story communicatie logo 01.png'
 import text from '../data/texts'
 
 const baseUrl = process.env.PUBLIC_URL
+
+console.log('base', baseUrl)
 
 injectGlobal([`
   body {
@@ -68,62 +71,65 @@ const showcases = ['strategy', 'ghostwriting', 'writing', 'editing']
 export default () => (
   <ThemeProvider theme={defaultTheme}>
     <Router>
-      <Box width={1}>
+      <ScrollToTop>
 
-        <Navbar width={1} bg={`canvas`}>
-          <MaxBox>
-            <Box width={[1, 1/8]}>
-              <LogoContainer>
-                <Box px={3} pt={1}>
-                  <Logo size={75} src={TrueStoryLogo} />
+        <Box width={1}>
+
+          <Navbar width={1} bg={`canvas`}>
+            <MaxBox>
+              <Box width={[1, 1/8]}>
+                <LogoContainer>
+                  <Box px={3} pt={1}>
+                    <Logo size={75} src={TrueStoryLogo} />
+                  </Box>
+                </LogoContainer>
+              </Box>
+              <Box width={[1, 7/8]} pt={1} textAlign={'right'}>
+                { links.map(({ to, label }) => (
+                  <Link component={NavLink} key={to} to={to} py={1} px={2} activeColor={`ocean`} color={`pencil`} fontSize={2}>{ label }</Link>
+                ))}
+                <Link component={NavLink} to={'tel:+31 6 287 087 34'} py={0} pl={4} color={`ocean`} fontSize={4}>06-287 087 34</Link>
+              </Box>
+            </MaxBox>
+          </Navbar>
+
+          <Content width={1}>
+            <Route exact path={`${baseUrl}/`} component={Home} />
+            <Route path={`${baseUrl}/over-ons`} component={About} />
+            <Route path={`${baseUrl}/wat-we-doen`} component={What} />
+            <Route path={`${baseUrl}/hoe-wij-het-doen`} component={How} />
+            <Route exact path={`${baseUrl}/true-stories`} component={Stories} />
+            <Route path={`${baseUrl}/true-stories/:slug`} component={Story} />
+            <Route path={`${baseUrl}/contact`} component={Contact} />
+
+          </Content>
+
+          <Box width={1} bg={`night`} color={`bleech`} py={4}>
+            <MaxBox>
+
+              <Box width={[1, 1/4]} px={3}>
+                <Heading thin mb={2} element="h5" fontSize={4}>Contact</Heading>
+                <Text m={0} fontSize={1} color={`bleech`} opacity={.5}>Your address here</Text>
+                <Button primary component={Link} to={`/contact`}>{text.actions.contact}</Button>
+              </Box>
+
+              <Box width={[1, 1/4]} px={3}>
+                <Heading thin mb={2} element="h5" fontSize={4}>True stories</Heading>
+                <Box width={1} pb={1}>
+                  <Link to={`/`} color={`ocean`}>Een blog link hier</Link>
                 </Box>
-              </LogoContainer>
-            </Box>
-            <Box width={[1, 7/8]} pt={1} textAlign={'right'}>
-              { links.map(({ to, label }) => (
-                <Link component={NavLink} key={to} to={to} py={1} px={2} activeColor={`ocean`} color={`pencil`} fontSize={2}>{ label }</Link>
-              ))}
-              <Link component={NavLink} to={'tel:+31 6 287 087 34'} py={0} pl={4} color={`ocean`} fontSize={4}>06-287 087 34</Link>
-            </Box>
-          </MaxBox>
-        </Navbar>
-
-        <Content width={1}>
-          <Route exact path={`${baseUrl}`} component={Home} />
-          <Route path={`${baseUrl}/over-ons`} component={About} />
-          <Route path={`${baseUrl}/wat-we-doen`} component={What} />
-          <Route path={`${baseUrl}/hoe-wij-het-doen`} component={How} />
-          <Route exact path={`${baseUrl}/true-stories`} component={Stories} />
-          <Route path={`${baseUrl}/true-stories/:slug`} component={Story} />
-          <Route path={`${baseUrl}/contact`} component={Contact} />
-
-        </Content>
-
-        <Box width={1} bg={`night`} color={`bleech`} py={4}>
-          <MaxBox>
-
-            <Box width={[1, 1/4]} px={3}>
-              <Heading thin mb={2} element="h5" fontSize={4}>Contact</Heading>
-              <Text m={0} fontSize={1} color={`bleech`} opacity={.5}>Your address here</Text>
-              <Button primary component={Link} to={`/contact`}>{text.actions.contact}</Button>
-            </Box>
-
-            <Box width={[1, 1/4]} px={3}>
-              <Heading thin mb={2} element="h5" fontSize={4}>True stories</Heading>
-              <Box width={1} pb={1}>
-                <Link to={`/`} color={`ocean`}>Een blog link hier</Link>
+                <Box width={1} pb={1}>
+                  <Link to={`/`} color={`ocean`}>En een blog link daar</Link>
+                </Box>
               </Box>
-              <Box width={1} pb={1}>
-                <Link to={`/`} color={`ocean`}>En een blog link daar</Link>
-              </Box>
-            </Box>
 
-          </MaxBox>
+            </MaxBox>
+          </Box>
+
+
         </Box>
 
-
-      </Box>
-
+      </ScrollToTop>
     </Router>
   </ThemeProvider>
 )
