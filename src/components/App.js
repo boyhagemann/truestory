@@ -54,12 +54,12 @@ const LogoContainer = styled.div`
 `
 
 const links = [
-  { label: 'Home', to: `${baseUrl}`},
-  { label: 'Wat doen we?', to: `${baseUrl}/wat-we-doen`},
-  { label: 'Hoe dan?', to: `${baseUrl}/hoe-wij-het-doen`},
-  { label: 'True stories', to: `${baseUrl}/true-stories`},
-  { label: 'Over ons', to: `${baseUrl}/over-ons`},
-  { label: 'Contact', to: `${baseUrl}/contact`},
+  { label: 'Home', to: `/`},
+  { label: 'Wat doen we?', to: `/wat-we-doen`},
+  { label: 'Hoe dan?', to: `/hoe-wij-het-doen`},
+  { label: 'True stories', to: `/true-stories`},
+  { label: 'Over ons', to: `/over-ons`},
+  { label: 'Contact', to: `/contact`},
 ]
 
 
