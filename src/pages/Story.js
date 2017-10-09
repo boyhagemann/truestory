@@ -29,7 +29,7 @@ const Story = ({ title, body, image, createdAt }) => (
     </Visual>
 
     <MaxBox width={1200}>
-      <Box width={1} px={3} mt={-4} textAlign={['center', 'left']} >
+      <Box width={1} px={2} mt={-4} textAlign={['center', 'left']} >
         <AvatarImage image={Rick} width={150} height={'150px'} position={['center', 'center']} />
         <Box mt={[1, 4]} ml={2}>
           <Heading element="h5" mt={2} mb={0} fontSize={4} color={'ocean'}>Rick van Leeuwen</Heading>
@@ -39,7 +39,7 @@ const Story = ({ title, body, image, createdAt }) => (
     </MaxBox>
 
     <MaxBox width={1200}>
-      <Box mb={4} px={3}>
+      <Box mb={4} px={2}>
         <Markdown>{body}</Markdown>
       </Box>
     </MaxBox>

@@ -13,6 +13,7 @@ import Logo from './Logo'
 import defaultTheme from '../themes/default'
 import ScrollToTop from './ScrollToTop'
 import Footer from './Footer'
+import HtmlLink from './HtmlLink'
 
 import Home from '../pages/Home'
 import About from '../pages/About'
@@ -61,10 +62,6 @@ const links = [
   { label: 'Contact', to: `/contact`},
 ]
 
-const Call = Box.withComponent('a').extend`
-  text-decoration: none;
-`
-
 const Preview = () => (
   <MaxBox width={600}>
     <Box px={3} py={4}>
@@ -100,7 +97,7 @@ export default () => (
                 { links.map(({ to, label }) => (
                   <Link component={NavLink} key={to} to={to} py={1} px={2} activeColor={`ocean`} color={`pencil`} fontSize={2}>{ label }</Link>
                 ))}
-                <Call
+                <HtmlLink
                   href={`tel:${ text.contact.telephone.full }`}
                   py={0}
                   pl={4}
@@ -109,7 +106,7 @@ export default () => (
                 >
                 <Icon name="telephone" size={25} mr={1} color={`ocean`} />
                 { text.contact.telephone.display }
-              </Call>
+              </HtmlLink>
               </Box>
             </MaxBox>
           </Navbar>
