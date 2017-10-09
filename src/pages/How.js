@@ -19,10 +19,10 @@ import text from '../data/texts'
 export default () => (
   <Box width={1}>
 
-    <Visual image={lightBulb} height={400}>
+    <Visual image={lightBulb} height={400} position={[`right`, 'center']}>
       <MaxBox width={1200}>
         <Box width={[1, 4/5]} px={3}>
-          <Heading thin fontSize={[6,6,6,8]} mt={[350, 350, 250]} element={'h1'} color={`bleech`}>{text.how.heading}</Heading>
+          <Heading thin fontSize={[5,6,6,8]} mt={[350, 350, 250]} element={'h1'} color={`bleech`}>{text.how.heading}</Heading>
         </Box>
       </MaxBox>
     </Visual>

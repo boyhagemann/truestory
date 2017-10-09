@@ -435,6 +435,12 @@ aws4@^1.2.1:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/aws4/-/aws4-1.6.0.tgz#83ef5ca860b2b32e4a0deedee8c771b9db57471e"
 
+axios@~0.15.3:
+  version "0.15.3"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-0.15.3.tgz#2c9d638b2e191a08ea1d6cc988eadd6ba5bdc053"
+  dependencies:
+    follow-redirects "1.0.0"
+
 axobject-query@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/axobject-query/-/axobject-query-0.1.0.tgz#62f59dbc59c9f9242759ca349960e7a2fe3c36c0"
@@ -1829,6 +1835,25 @@ content@3.x.x:
   dependencies:
     boom "5.x.x"
 
+contentful-sdk-core@^3.14.1:
+  version "3.14.4"
+  resolved "https://registry.yarnpkg.com/contentful-sdk-core/-/contentful-sdk-core-3.14.4.tgz#6dbb664e5f8bf7439695f4fe806dd03be70b2343"
+  dependencies:
+    es6-promise "^4.0.5"
+    lodash "^4.17.4"
+    npmlog "^4.0.2"
+    qs "^6.1.0"
+
+contentful@^4.6.2:
+  version "4.6.2"
+  resolved "https://registry.yarnpkg.com/contentful/-/contentful-4.6.2.tgz#b99f1d12e32d08d40bb68e41bfb53a488a4b88f0"
+  dependencies:
+    axios "~0.15.3"
+    contentful-sdk-core "^3.14.1"
+    es6-promise "^4.0.5"
+    json-stringify-safe "^5.0.1"
+    lodash "^4.17.4"
+
 convert-source-map@^1.1.0, convert-source-map@^1.4.0, convert-source-map@^1.5.0:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/convert-source-map/-/convert-source-map-1.5.0.tgz#9acd70851c6d5dfdd93d9282e5edf94a03ff46b5"
@@ -3097,6 +3122,12 @@ flat-cache@^1.2.1:
 flatten@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/flatten/-/flatten-1.0.2.tgz#dae46a9d78fbe25292258cc1e780a41d95c03782"
+
+follow-redirects@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.0.0.tgz#8e34298cbd2e176f254effec75a1c78cc849fd37"
+  dependencies:
+    debug "^2.2.0"
 
 for-in@^1.0.1:
   version "1.0.2"
@@ -4624,7 +4655,7 @@ json-stable-stringify@^1.0.1:
   dependencies:
     jsonify "~0.0.0"
 
-json-stringify-safe@5.0.1, json-stringify-safe@~5.0.0, json-stringify-safe@~5.0.1:
+json-stringify-safe@5.0.1, json-stringify-safe@^5.0.1, json-stringify-safe@~5.0.0, json-stringify-safe@~5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/json-stringify-safe/-/json-stringify-safe-5.0.1.tgz#1296a2d58fd45f19a0f6ce01d65701e2c735b6eb"
 
@@ -6111,7 +6142,7 @@ q@^1.1.2:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/q/-/q-1.5.0.tgz#dd01bac9d06d30e6f219aecb8253ee9ebdc308f1"
 
-qs@6.5.1, qs@^6.5.1:
+qs@6.5.1, qs@^6.1.0, qs@^6.5.1:
   version "6.5.1"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.5.1.tgz#349cdf6eef89ec45c12d7d5eb3fc0c870343a6d8"
 
@@ -6248,6 +6279,10 @@ react-markdown@^2.5.0:
     commonmark-react-renderer "^4.2.4"
     in-publish "^2.0.0"
     prop-types "^15.5.1"
+
+react-moment@^0.6.5:
+  version "0.6.5"
+  resolved "https://registry.yarnpkg.com/react-moment/-/react-moment-0.6.5.tgz#e78fff33382424d422af6eb160567144a80d7c9f"
 
 react-router-dom@^4.2.2:
   version "4.2.2"

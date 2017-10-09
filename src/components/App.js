@@ -12,7 +12,9 @@ import Avatar from './Avatar'
 import Logo from './Logo'
 import defaultTheme from '../themes/default'
 import ScrollToTop from './ScrollToTop'
+import Footer from './Footer'
 
+import WithStories from './WithStories'
 import Home from '../pages/Home'
 import About from '../pages/About'
 import What from '../pages/What'
@@ -64,7 +66,7 @@ const Preview = () => (
   <MaxBox>
     <Box px={3} py={4}>
       <Heading thin fontSize={[5,7,8]} color={`pencil`}>Nog even geduld...</Heading>
-      <Text>De website komt er binnenkort aan.</Text>
+      <Text>De website is bijna klaar.</Text>
     </Box>
   </MaxBox>
 )
@@ -115,41 +117,13 @@ export default () => (
             <Route path={`${baseUrl}/over-ons`} component={About} />
             <Route path={`${baseUrl}/wat-we-doen`} component={What} />
             <Route path={`${baseUrl}/hoe-wij-het-doen`} component={How} />
-            <Route exact path={`${baseUrl}/true-stories`} component={Stories} />
+            <Route exact path={`${baseUrl}/true-stories`} component={WithStories(Stories)} />
             <Route path={`${baseUrl}/true-stories/:slug`} component={Story} />
             <Route path={`${baseUrl}/contact`} component={Contact} />
 
           </Content>
 
-          <Box width={1} bg={`night`} color={`bleech`} py={4}>
-            <MaxBox>
-
-              <Box width={[1, 1/4]} mt={2} px={3}>
-                <Logo size={150} />
-              </Box>
-
-              <Box width={[1, 1/4]} px={3}>
-                <Heading thin mb={2} element="h5" fontSize={4}>Contact</Heading>
-                <Text m={0} fontSize={1} color={`bleech`} opacity={.5}>{ text.contact.telephone.display }</Text>
-                <Button primary component={Link} to={`/contact`} mt={3}>
-                  <Icon name="chat" size={20} color={`bleech`} opacity={.5} mt={1} mr={1} />
-                  {text.actions.contact}
-                </Button>
-              </Box>
-
-              <Box width={[1, 1/4]} px={3}>
-                <Heading thin mb={2} element="h5" fontSize={4}>True stories</Heading>
-                <Box width={1} pb={1}>
-                  <Link to={`/`} color={`ocean`}>Een blog link hier</Link>
-                </Box>
-                <Box width={1} pb={1}>
-                  <Link to={`/`} color={`ocean`}>En een blog link daar</Link>
-                </Box>
-              </Box>
-
-            </MaxBox>
-          </Box>
-
+          <Footer />
 
         </Box>
 

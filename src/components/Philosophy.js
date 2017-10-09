@@ -9,9 +9,9 @@ import text from '../data/texts'
 export default () => (
     <Box width={1} bg={`ocean`} color={`bleech`}>
       <MaxBox>
-        <Box px={3} py={4}>
-          <Heading fontSize={5} color={`bleech`}>{ text.philosophy.heading }</Heading>
-          <Text fontSize={3} color={`bleech`} opacity={.5}>{ text.philosophy.body }</Text>
+        <Box px={3} py={[2,4]}>
+          <Heading level={3} mt={2} color={`bleech`}>{ text.philosophy.heading }</Heading>
+          <Text color={`bleech`} opacity={.5}>{ text.philosophy.body }</Text>
         </Box>
       </MaxBox>
     </Box>

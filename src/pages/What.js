@@ -29,19 +29,19 @@ export default () => (
 
     <MaxBox width={1200}>
       <Box px={3} py={2}>
-        <Text textAlign={['center', 'left']}>{text.what.intro}</Text>
+        <Text textAlign={['center', 'left']} mt={3}>{text.what.intro}</Text>
       </Box>
 
       { text.products.map(product => (
-        <Box width={1} mb={4} px={3} textAlign={['center', 'left']}>
+        <Box width={1} my={3} px={3} textAlign={['center', 'left']}>
           <Box width={[1, 1/3, 1/4, 1/5]} mt={[0, 3, 2]}>
             <Avatar fontSize={0} size={180} p={30} color={`sahara`}>
               <Icon name={product.icon} size={120} />
             </Avatar>
           </Box>
           <Box width={[1, 2/3, 3/4, 4/5]}>
-            <Heading element={`h2`} fontSize={5} mt={3} mb={0}>{ product.heading }</Heading>
-            <Text fontSize={3}>{ product.body }</Text>
+            <Heading level={2} mt={2} mb={2}>{ product.heading }</Heading>
+            <Text fontSize={3} mt={0}>{ product.body }</Text>
           </Box>
         </Box>
       ))}

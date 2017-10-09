@@ -26,7 +26,7 @@ export default () => (
 
     <MaxBox width={1200}>
       <Box px={3} py={2}>
-        <Text fontSize={4}>{text.intro}</Text>
+        <Text>{text.intro}</Text>
       </Box>
     </MaxBox>
 

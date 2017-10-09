@@ -26,8 +26,8 @@ export default () => (
 
     <MaxBox width={1200}>
       <Box px={3} py={2}>
-        <Heading thin fontSize={7}>Over ons</Heading>
-        <Text fontSize={4}>{text.intro}</Text>
+        <Heading thin level={1}>Over ons</Heading>
+        <Text>{text.intro}</Text>
       </Box>
     </MaxBox>
 

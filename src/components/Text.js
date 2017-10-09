@@ -14,4 +14,9 @@ const Text = styled.p`
   line-height: 1.6em;
 `
 
-export default props => <Text color={`pencil`} fontSize={4} { ...props } />
+export default ({ small, ...props }) => {
+
+  const fontSize = small ? [2,2,3] : [3,3,4]
+
+  return <Text color={`pencil`} mt={2} mb={2} fontSize={fontSize} { ...props } />
+}

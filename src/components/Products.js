@@ -13,21 +13,23 @@ import text from '../data/texts'
 export default props => (
   <Box width={1} bg={`sahara`} pb={4} { ...props }>
     <MaxBox>
-      { text.products.map( product => (
-        <Box mt={-3} key={product.name} width={[1, 1/2, 1/2, 1/4]} p={2} textAlign={'center'}>
-          <Link to={`/wat-we-doen`}>
-            <Avatar size={130} p={25} fontSize={0} bg={`sahara--`}>
-              <Icon name={product.icon} size={80} color={`bleech`} />
-            </Avatar>
-          </Link>
-          <Box width={1}>
+      <Box width={1} mt={-3}>
+        { text.products.map( product => (
+          <Box mt={0} mb={3} key={product.name} width={[1, 1/2, 1/2, 1/4]} p={2} textAlign={'center'}>
             <Link to={`/wat-we-doen`}>
-              <Heading bold color={`night`} mb={0} element="h2" fontSize={4}>{product.heading}</Heading>
+              <Avatar size={130} p={25} fontSize={0} bg={`sahara--`}>
+                <Icon name={product.icon} size={80} color={`bleech`} />
+              </Avatar>
             </Link>
+            <Box width={1}>
+              <Link to={`/wat-we-doen`}>
+                <Heading color={`night`} level={3}>{product.heading}</Heading>
+              </Link>
+            </Box>
+            <Text small mt={0}>{ product.body }</Text>
           </Box>
-          <Text fontSize={2}>{ product.body }</Text>
-        </Box>
-      )) }
+        )) }
+      </Box>
     </MaxBox>
   </Box>
 )
