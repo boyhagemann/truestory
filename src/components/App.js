@@ -63,10 +63,12 @@ const links = [
 ]
 
 const Preview = () => (
-  <MaxBox>
+  <MaxBox width={600}>
     <Box px={3} py={4}>
-      <Heading thin fontSize={[5,7,8]} color={`pencil`}>Nog even geduld...</Heading>
+      <Heading thin level={1} color={`pencil`}>Nog even geduld...</Heading>
       <Text>De website is bijna klaar.</Text>
+      <Heading mt={4} level={3}>True Story Communicatie</Heading>
+      <Text color={`ocean`} fontSize={2}>06-28708734 | rick@truestorycommunicatie.nl</Text>
     </Box>
   </MaxBox>
 )
