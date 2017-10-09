@@ -67,7 +67,7 @@ const Preview = () => (
   <MaxBox>
     <Box px={3} py={4}>
       <Heading thin fontSize={[5,7,8]} color={`pencil`}>Nog even geduld...</Heading>
-      <Text>Website komt er binnenkort aan.</Text>
+      <Text>De website komt er binnenkort aan.</Text>
     </Box>
   </MaxBox>
 )
