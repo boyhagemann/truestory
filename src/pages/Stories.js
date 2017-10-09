@@ -34,7 +34,7 @@ const Stories = ({ stories = []}) => (
               <Box width={1} p={[2,2,3]} bg={`bleech`}>
                 <Heading thin level={1} my={2}>{ story.title }</Heading>
                 <Text mt={0}>{ story.teaser }</Text>
-                <Button large primary component={Link} to={`/true-stories/${story.slug}`}>{story.buttonText || text.actions.readMore}</Button>
+                <Button large primary component={Link} mt={1} to={`/true-stories/${story.slug}`}>{story.buttonText || text.actions.readMore}</Button>
               </Box>
             </Story>
         ))}

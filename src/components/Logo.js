@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import Link from './Link'
 import TrueStoryLogo from '../assets/images/true story communicatie logo 01.png'
 
 const Logo = styled.img`
@@ -8,5 +9,7 @@ const Logo = styled.img`
 `
 
 export default ({ size = 50, ...props }) => (
-  <Logo size={size} src={TrueStoryLogo} { ...props } />
+  <Link to={`/`}>
+    <Logo size={size} src={TrueStoryLogo} { ...props } />
+  </Link>
 )
