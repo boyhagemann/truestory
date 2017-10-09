@@ -37,6 +37,7 @@ export default () => (
   <Box width={1}>
 
     <Box width={1} bg={`sahara`} py={4}>
+
       <MaxBox width={1200}>
         { stories.map(story => (
             <Box width={1} px={3} py={2}>
@@ -55,7 +56,7 @@ export default () => (
       </MaxBox>
     </Box>
 
-    <Products />
+    <Products pt={4} />
     <Philosophy />
 
   </Box>

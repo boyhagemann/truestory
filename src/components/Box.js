@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { space, width, fontSize, color, responsiveStyle } from 'styled-system'
 
 const textAlign = responsiveStyle('text-align', 'textAlign')
+const display = responsiveStyle('display', 'display')
 
 
 export default styled.div`
@@ -15,4 +16,5 @@ export default styled.div`
   ${fontSize}
   ${color}
   ${textAlign}
+  ${display}
 `

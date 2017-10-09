@@ -11,6 +11,7 @@ import Avatar from '../components/Avatar'
 
 import Products from '../components/Products'
 import Philosophy from '../components/Philosophy'
+import CallToAction from '../components/CallToAction'
 import notes from '../assets/images/notes-514998_1920.jpg'
 import text from '../data/texts'
 
@@ -28,11 +29,9 @@ export default () => (
         <Heading thin fontSize={7}>Over ons</Heading>
         <Text fontSize={4}>{text.intro}</Text>
       </Box>
-      <Box width={1} textAlign={'center'} pb={4}>
-        <Button component={Link} to={`/contact`} huge primary>Neem contact op</Button>
-      </Box>
     </MaxBox>
 
+    <CallToAction />
     <Products />
     <Philosophy />
 

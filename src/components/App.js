@@ -6,8 +6,10 @@ import Box from './Box'
 import Link from './Link'
 import Heading from './Heading'
 import Text from './Text'
+import Icon from './Icon'
 import Button from './Button'
 import Avatar from './Avatar'
+import Logo from './Logo'
 import defaultTheme from '../themes/default'
 import ScrollToTop from './ScrollToTop'
 
@@ -19,7 +21,6 @@ import Stories from '../pages/Stories'
 import Story from '../pages/Story'
 import Contact from '../pages/Contact'
 
-import TrueStoryLogo from '../assets/images/true story communicatie logo 01.png'
 import text from '../data/texts'
 
 const baseUrl = process.env.PUBLIC_URL + '/preview'
@@ -44,10 +45,6 @@ const Navbar = Box.extend`
   height: 58px;
 `
 
-const Logo = styled.img`
-  width: ${ props => props.size }px;
-  height: ${ props => props.size }px;
-`
 const LogoContainer = styled.div`
   position: absolute;
   left: 0;
@@ -87,18 +84,28 @@ export default () => (
 
           <Navbar width={1} bg={`canvas`}>
             <MaxBox>
-              <Box width={[1, 1/8]}>
+              <Box width={[1, 1/8]} display={['none', 'block']}>
                 <LogoContainer>
                   <Box px={3} pt={1}>
-                    <Logo size={75} src={TrueStoryLogo} />
+                    <Logo size={75} />
                   </Box>
                 </LogoContainer>
               </Box>
-              <Box width={[1, 7/8]} pt={1} textAlign={'right'}>
+              <Box width={[1, 7/8]} pt={1} px={3} textAlign={'right'}>
                 { links.map(({ to, label }) => (
                   <Link component={NavLink} key={to} to={to} py={1} px={2} activeColor={`ocean`} color={`pencil`} fontSize={2}>{ label }</Link>
                 ))}
-                <Link component={NavLink} to={`tel:${ text.contact.telephone.full }`} py={0} pl={4} color={`ocean`} fontSize={4}>{ text.contact.telephone.display }</Link>
+                <Link
+                  component={NavLink}
+                  to={`tel:${ text.contact.telephone.full }`}
+                  py={0}
+                  pl={4}
+                  color={`ocean`}
+                  fontSize={4}
+                >
+                <Icon name="telephone" size={25} mr={1} color={`ocean`} />
+                { text.contact.telephone.display }
+              </Link>
               </Box>
             </MaxBox>
           </Navbar>
@@ -117,10 +124,17 @@ export default () => (
           <Box width={1} bg={`night`} color={`bleech`} py={4}>
             <MaxBox>
 
+              <Box width={[1, 1/4]} mt={2} px={3}>
+                <Logo size={150} />
+              </Box>
+
               <Box width={[1, 1/4]} px={3}>
                 <Heading thin mb={2} element="h5" fontSize={4}>Contact</Heading>
                 <Text m={0} fontSize={1} color={`bleech`} opacity={.5}>{ text.contact.telephone.display }</Text>
-                <Button primary component={Link} to={`/contact`} mt={3}>{text.actions.contact}</Button>
+                <Button primary component={Link} to={`/contact`} mt={3}>
+                  <Icon name="chat" size={20} color={`bleech`} opacity={.5} mt={1} mr={1} />
+                  {text.actions.contact}
+                </Button>
               </Box>
 
               <Box width={[1, 1/4]} px={3}>

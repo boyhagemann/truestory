@@ -20,7 +20,7 @@ export default ({ size = 30, children, ...props }) => {
   const bg = color(props).color
   const fs = parseInt(fontSize(props).fontSize.replace('px', ''))
 
-  return <StyledAvatar p={1} bg={bg} fs={fs} { ...props } size={size} color={`bleech`}>
+  return <StyledAvatar bg={bg} fs={fs} { ...props } size={size} color={`bleech`}>
     <Content>{children}</Content>
   </StyledAvatar>
 }

@@ -75,6 +75,7 @@ communicatievraagstuk uit de voeten
   products: [
     {
       name: 'ghostwriting',
+      icon: 'strategy',
       heading: `Ghostwriting`,
       body: `Graag een blog of artikel schrijven, maar komt u er niet aan toe?
       Wilt u na een kwartiertje bellen een tekst onder ogen krijgen die u zelf geschreven had kunnen hebben? Wij zijn gespecialiseerd in ghostwriterschap.`,
@@ -82,18 +83,21 @@ communicatievraagstuk uit de voeten
 
     {
       name: 'strategy',
+      icon: 'idea',
       heading: `Verhalen en strategie`,
       body: `Storytelling, content-/en communicatiestrategie en tekstadvies, visiestukken, speeches, tekstadvies, contentstrategie, scenario’s en scripts voor videoproducties.`,
     },
 
     {
       name: 'writing',
+      icon: 'writing',
       heading: `Tekstschrijven`,
       body: `Copywriting en bedrijfsjournalistiek; bedrijfsverhalen, artikelen, e-mailings, nieuwsbrieven, brochures, persberichten, reportages, whitepapers, testimonials, speeches, SEO-teksten, AdWords, short copy, proza (fictie &amp; non-fictie).`
     },
 
     {
       name: 'editing',
+      icon: 'editing',
       heading: `Redactie/correctie`,
       body: `Tekstredactie, webredactie, hoofd- en eindredactie, herschrijven, tekstcorrectie, jaarverslagen, columns, voor- en nawoorden.`,
     },
