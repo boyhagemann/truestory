@@ -25,7 +25,7 @@ export default () => (
     </Visual>
 
     <MaxBox width={1200}>
-      <Box px={3} py={2}>
+      <Box px={2} py={2}>
         <Heading thin level={1}>Over ons</Heading>
         <Text>{text.intro}</Text>
       </Box>

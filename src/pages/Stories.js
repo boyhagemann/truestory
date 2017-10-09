@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { getStories } from '../utils/http'
 import MaxBox from '../components/MaxBox'
 import Heading from '../components/Heading'
 import Visual from '../components/Visual'
@@ -17,7 +18,7 @@ import text from '../data/texts'
 
 const Story = Box.withComponent('article')
 
-export default ({ stories = []}) => (
+const Stories = ({ stories = []}) => (
   <Box width={1}>
 
     <Box width={1} bg={`sahara`} py={[0,0,4]}>
@@ -45,3 +46,26 @@ export default ({ stories = []}) => (
 
   </Box>
 )
+
+
+
+
+export default class extends Component {
+
+  constructor() {
+    super()
+    this.state = {
+      stories: []
+    }
+  }
+
+  componentDidMount() {
+    getStories().then( stories => {
+      this.setState({ stories })
+    })
+  }
+
+  render() {
+    return <Stories { ...this.state } />
+  }
+}

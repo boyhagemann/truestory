@@ -14,7 +14,6 @@ import defaultTheme from '../themes/default'
 import ScrollToTop from './ScrollToTop'
 import Footer from './Footer'
 
-import WithStories from './WithStories'
 import Home from '../pages/Home'
 import About from '../pages/About'
 import What from '../pages/What'
@@ -119,7 +118,7 @@ export default () => (
             <Route path={`${baseUrl}/over-ons`} component={About} />
             <Route path={`${baseUrl}/wat-we-doen`} component={What} />
             <Route path={`${baseUrl}/hoe-wij-het-doen`} component={How} />
-            <Route exact path={`${baseUrl}/true-stories`} component={WithStories(Stories)} />
+            <Route exact path={`${baseUrl}/true-stories`} component={Stories} />
             <Route path={`${baseUrl}/true-stories/:slug`} component={Story} />
             <Route path={`${baseUrl}/contact`} component={Contact} />
 

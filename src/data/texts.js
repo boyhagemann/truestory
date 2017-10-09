@@ -8,6 +8,7 @@ export default {
 
   actions: {
     contact: `Neem contact op`,
+    send: 'Versturen',
   },
 
   contact: {

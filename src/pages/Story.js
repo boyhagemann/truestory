@@ -33,7 +33,7 @@ const Story = ({ title, body, image, createdAt }) => (
         <AvatarImage image={Rick} width={150} height={'150px'} position={['center', 'center']} />
         <Box mt={[1, 4]} ml={2}>
           <Heading element="h5" mt={2} mb={0} fontSize={4} color={'ocean'}>Rick van Leeuwen</Heading>
-          <Text m={0} fontSize={1} color={`pencil+++`}>Oprichter True Story | <Moment fromNow>{createdAt}</Moment></Text>
+          <Text mt={0} fontSize={1} color={`pencil+++`}>Oprichter True Story | <Moment fromNow>{createdAt}</Moment></Text>
         </Box>
       </Box>
     </MaxBox>

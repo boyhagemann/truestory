@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { space, width, fontSize, color, removeProps, responsiveStyle } from 'styled-system'
+import Icon from './Icon'
 
 const Component = ({ component: Component = 'button', primary, positive, negative, large, huge, borderColor, ...props}) => {
   const cleanProps = removeProps(props)
@@ -25,7 +26,7 @@ const Button = styled(Component)`
   }
 `
 
-export default styled(props => {
+export default styled(({ icon, children, ...props }) => {
 
   let buttonProps = {
     p: 1,
@@ -35,19 +36,24 @@ export default styled(props => {
     borderColor: 'none',
   }
 
-  if(props.huge) {
-      buttonProps.p = 3
+  let iconProps = {
+    size: 20,
+    mr: 1,
   }
 
   if(props.large) {
       buttonProps.py = 1
       buttonProps.px = 2
       buttonProps.fontSize = [2,3]
+      iconProps.mr = 2
+      iconProps.size = 20
   }
 
   if(props.huge) {
       buttonProps.p = 2
       buttonProps.fontSize = [3,4,5]
+      iconProps.mr = 2
+      iconProps.size = 30
   }
 
   if(props.primary) {
@@ -72,7 +78,10 @@ export default styled(props => {
     buttonProps.opacity = 0.5
   }
 
-  return <Button { ...buttonProps } { ...props} />
+  return <Button { ...buttonProps } { ...props}>
+    { icon && <Icon name={icon} color={`bleech`} opacity={.5} { ...iconProps } /> }
+    { children }
+  </Button>
 
 })`
 

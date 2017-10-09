@@ -11,11 +11,10 @@ const mapToStory = item => ({
   createdAt: item.sys.createdAt,
 })
 
-export const getStories = () => client
-  .getEntries()
-  .then( stories => {
-    console.log(stories)
-    return stories
+export const getStories = filters => client
+  .getEntries({    
+    content_type: 'blog',
+    ...filters,
   })
   .then( response => response.items.map(mapToStory))
 
