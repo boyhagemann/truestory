@@ -8,6 +8,7 @@
 
 # production
 /.serverless
+/build
 
 # misc
 .DS_Store

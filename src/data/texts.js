@@ -1,7 +1,6 @@
 
 export default {
 
-
   payoffs: {
     visual: `Show, don't yell`,
     specialist: `U heeft een goed verhaal, maar een specialist moet dat er eens uittrekken?`,
@@ -13,6 +12,10 @@ export default {
 
   contact: {
     visual: 'De koffie staat klaar',
+    telephone: {
+      full: '+31 6 287 087 34',
+      display: '06-287 087 34',
+    }
   },
 
   intro: `U heeft zoveel te vertellen, maar het komt er niet van.

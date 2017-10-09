@@ -22,9 +22,7 @@ import Contact from '../pages/Contact'
 import TrueStoryLogo from '../assets/images/true story communicatie logo 01.png'
 import text from '../data/texts'
 
-const baseUrl = process.env.PUBLIC_URL
-
-console.log('base', baseUrl)
+const baseUrl = process.env.PUBLIC_URL + '/preview'
 
 injectGlobal([`
   body {
@@ -65,6 +63,15 @@ const links = [
   { label: 'Contact', to: `/contact`},
 ]
 
+const Preview = () => (
+  <MaxBox>
+    <Box px={3} py={4}>
+      <Heading thin fontSize={[5,7,8]} color={`pencil`}>Nog even geduld...</Heading>
+      <Text>Website komt er binnenkort aan.</Text>
+    </Box>
+  </MaxBox>
+)
+
 
 const showcases = ['strategy', 'ghostwriting', 'writing', 'editing']
 
@@ -72,6 +79,9 @@ export default () => (
   <ThemeProvider theme={defaultTheme}>
     <Router>
       <ScrollToTop>
+
+        <Route exact path={`/`} component={Preview} />
+        <Route path={baseUrl} render={ () => (
 
         <Box width={1}>
 
@@ -88,7 +98,7 @@ export default () => (
                 { links.map(({ to, label }) => (
                   <Link component={NavLink} key={to} to={to} py={1} px={2} activeColor={`ocean`} color={`pencil`} fontSize={2}>{ label }</Link>
                 ))}
-                <Link component={NavLink} to={'tel:+31 6 287 087 34'} py={0} pl={4} color={`ocean`} fontSize={4}>06-287 087 34</Link>
+                <Link component={NavLink} to={`tel:${ text.contact.telephone.full }`} py={0} pl={4} color={`ocean`} fontSize={4}>{ text.contact.telephone.display }</Link>
               </Box>
             </MaxBox>
           </Navbar>
@@ -109,8 +119,8 @@ export default () => (
 
               <Box width={[1, 1/4]} px={3}>
                 <Heading thin mb={2} element="h5" fontSize={4}>Contact</Heading>
-                <Text m={0} fontSize={1} color={`bleech`} opacity={.5}>Your address here</Text>
-                <Button primary component={Link} to={`/contact`}>{text.actions.contact}</Button>
+                <Text m={0} fontSize={1} color={`bleech`} opacity={.5}>{ text.contact.telephone.display }</Text>
+                <Button primary component={Link} to={`/contact`} mt={3}>{text.actions.contact}</Button>
               </Box>
 
               <Box width={[1, 1/4]} px={3}>
@@ -128,6 +138,9 @@ export default () => (
 
 
         </Box>
+
+
+      )} />
 
       </ScrollToTop>
     </Router>

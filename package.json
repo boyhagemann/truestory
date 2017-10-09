@@ -18,7 +18,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "deploy": "npm run build & copy build\\index.html build\\200.html & surge --project build --domain fertile-cow.surge.sh",
+    "deploy": "npm run build & copy build\\index.html build\\200.html & surge build truestorycommunicatie.nl",
     "deploy2": "npm run build & serverless deploy"
   },
   "devDependencies": {

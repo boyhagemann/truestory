@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import { space, width, fontSize, color, removeProps } from 'styled-system'
 
-const baseUrl = process.env.PUBLIC_URL
+const baseUrl = process.env.PUBLIC_URL + '/preview'
 
 const colorHover = props => color({ ...props, color: props.hoverColor })
 
