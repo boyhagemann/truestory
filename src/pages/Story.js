@@ -20,7 +20,7 @@ import Rick from '../assets/images/Rick-van-Leeuwen-1_10.jpg'
 const Story = ({ title, body, image, createdAt }) => (
   <Box width={1}>
 
-    <Visual image={image} height={'400px'} width={1}>
+    <Visual image={image} height={['300px', '400px', '600px']} width={1}>
       <MaxBox width={1200}>
         <Box px={3}>
           <Heading thin element={`h3`} mt={250} mb={50} fontSize={[6,6,6,8]} color={`bleech`}></Heading>

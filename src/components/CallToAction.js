@@ -7,8 +7,8 @@ import Icon from './Icon'
 
 export default () => (
   <MaxBox>
-    <Box width={1} textAlign={'center'} pb={4} mt={2} mb={4}>
-      <Button component={Link} to={`/contact`} huge primary icon="chat">Neem contact op</Button>
+    <Box width={1} textAlign={'center'} px={2} pb={4} mt={2} mb={4}>
+      <Button width={[1, 'auto']} component={Link} to={`/contact`} huge primary icon="chat">Neem contact op</Button>
     </Box>
   </MaxBox>
 )

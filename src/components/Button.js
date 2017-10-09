@@ -20,6 +20,7 @@ const Button = styled(Component)`
   box-sizing: border-box;
   cursor: pointer;
   text-decoration: none;
+  text-align: center;
 
   &:focus {
     outline:0;
