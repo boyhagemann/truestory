@@ -61,6 +61,10 @@ const links = [
   { label: 'Contact', to: `/contact`},
 ]
 
+const Call = Box.withComponent('a').extend`
+  text-decoration: none;
+`
+
 const Preview = () => (
   <MaxBox width={600}>
     <Box px={3} py={4}>
@@ -72,8 +76,6 @@ const Preview = () => (
   </MaxBox>
 )
 
-
-const showcases = ['strategy', 'ghostwriting', 'writing', 'editing']
 
 export default () => (
   <ThemeProvider theme={defaultTheme}>
@@ -98,9 +100,8 @@ export default () => (
                 { links.map(({ to, label }) => (
                   <Link component={NavLink} key={to} to={to} py={1} px={2} activeColor={`ocean`} color={`pencil`} fontSize={2}>{ label }</Link>
                 ))}
-                <Link
-                  component={NavLink}
-                  to={`tel:${ text.contact.telephone.full }`}
+                <Call
+                  href={`tel:${ text.contact.telephone.full }`}
                   py={0}
                   pl={4}
                   color={`ocean`}
@@ -108,7 +109,7 @@ export default () => (
                 >
                 <Icon name="telephone" size={25} mr={1} color={`ocean`} />
                 { text.contact.telephone.display }
-              </Link>
+              </Call>
               </Box>
             </MaxBox>
           </Navbar>

@@ -9,6 +9,7 @@ export default {
   actions: {
     contact: `Neem contact op`,
     send: 'Versturen',
+    readMore: 'Lees verder',
   },
 
   contact: {
@@ -16,7 +17,11 @@ export default {
     telephone: {
       full: '+31 6 287 087 34',
       display: '06-287 087 34',
-    }
+    },
+    email: {
+      full: 'rick@truestorycommunicatie.nl',
+      display: 'rick@truestorycommunicatie.nl',
+    },
   },
 
   intro: `U heeft zoveel te vertellen, maar het komt er niet van.
