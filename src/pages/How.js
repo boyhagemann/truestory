@@ -28,7 +28,9 @@ export default () => (
     </Visual>
 
     <MaxBox width={1200}>
-      <Markdown px={3} mb={4}>{text.how.body}</Markdown>
+      <Box px={3} py={2} mt={2} mb={4}>
+        <Markdown>{text.how.body}</Markdown>
+      </Box>
     </MaxBox>
 
     <CallToAction />

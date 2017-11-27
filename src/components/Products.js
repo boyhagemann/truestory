@@ -13,7 +13,7 @@ import text from '../data/texts'
 export default props => (
   <Box width={1} bg={`sahara`} pb={4} { ...props }>
     <MaxBox>
-      <Box width={1} mt={-3}>
+      <Box width={1} mt={-4}>
         { text.products.map( product => (
           <Box mt={0} mb={3} key={product.name} width={[1, 1/2, 1/2, 1/4]} p={2} textAlign={'center'}>
             <Link to={`/wat-we-doen`}>
@@ -26,7 +26,7 @@ export default props => (
                 <Heading color={`night`} level={3}>{product.heading}</Heading>
               </Link>
             </Box>
-            <Text small mt={0}>{ product.body }</Text>
+            <Text small mt={0}>{ product.teaser }</Text>
           </Box>
         )) }
       </Box>

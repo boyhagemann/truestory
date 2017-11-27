@@ -7,7 +7,7 @@ const baseUrl = process.env.PUBLIC_URL + '/preview'
 
 const colorHover = props => color({ ...props, color: props.hoverColor })
 
-const PureLink = ({ hoverColor, ...props }) => <Link { ...removeProps(props) } />
+const PureLink = ({ hoverColor, component: Component = Link, ...props }) => <Component { ...removeProps(props) } />
 
 const StyledLink = styled(PureLink)`
   display: inline-block;
@@ -26,4 +26,4 @@ const StyledLink = styled(PureLink)`
   }
 `
 
-export default ({ to, ...props }) => <StyledLink to={`${baseUrl}${to}`} color={`storm`} { ...props } />
+export default ({ to, ...props }) => <StyledLink to={`${baseUrl}${to}`} color={`ocean`} { ...props } />

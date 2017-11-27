@@ -13,7 +13,6 @@ import Logo from './Logo'
 import defaultTheme from '../themes/default'
 import ScrollToTop from './ScrollToTop'
 import Footer from './Footer'
-import HtmlLink from './HtmlLink'
 
 import Home from '../pages/Home'
 import About from '../pages/About'
@@ -97,7 +96,8 @@ export default () => (
                 { links.map(({ to, label }) => (
                   <Link component={NavLink} key={to} to={to} py={1} px={2} activeColor={`ocean`} color={`pencil`} fontSize={2}>{ label }</Link>
                 ))}
-                <HtmlLink
+                <Link
+                  component="a"
                   href={`tel:${ text.contact.telephone.full }`}
                   py={0}
                   pl={4}
@@ -106,7 +106,7 @@ export default () => (
                 >
                 <Icon name="telephone" size={25} mr={1} color={`ocean`} />
                 { text.contact.telephone.display }
-              </HtmlLink>
+              </Link>
               </Box>
             </MaxBox>
           </Navbar>

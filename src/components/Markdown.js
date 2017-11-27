@@ -3,6 +3,7 @@ import ReactMarkdown from 'react-markdown'
 import Heading from './Heading'
 import Text from './Text'
 import Box from './Box'
+import Link from './Link'
 
 const renderHeading = ({ level, ...props }) => {
   switch(level) {
@@ -25,7 +26,8 @@ export default ({ children, ...props }) => (
       source={children}
       renderers={{
         heading: renderHeading,
-        paragraph: Text
+        paragraph: (ownProps) => <Text {...ownProps} { ...props} />,
+      link: (ownProps) => <Link component="a" { ...ownProps} { ...props} />
       }} />
   </Box>
 )

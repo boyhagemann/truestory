@@ -7,7 +7,6 @@ import Link from './Link'
 import Text from './Text'
 import Button from './Button'
 import Logo from './Logo'
-import HtmlLink from './HtmlLink'
 import Icon from './Icon'
 
 import text from '../data/texts'
@@ -20,11 +19,11 @@ const Footer = ({ stories = [] }) => (
         <Heading thin mb={2} element="h5" fontSize={4}>Contact</Heading>
         <Text m={0} fontSize={3} color={`pencil`}>
           <Icon name="telephone" size={20} mr={1} color={`ocean`} />
-          <HtmlLink href={`tel:${text.contact.telephone.full}`} color={`pencil`} hoverColor={`bleech`}>{ text.contact.telephone.display }</HtmlLink>
+          <Link component="a" href={`tel:${text.contact.telephone.full}`} color={`pencil`} hoverColor={`bleech`}>{ text.contact.telephone.display }</Link>
         </Text>
         <Text m={0} fontSize={1} color={`pencil`}>
           <Icon name="email" size={20} mr={1} color={`ocean`} />
-          <HtmlLink href={`mailto:${text.contact.email.display}`} color={`pencil`} hoverColor={`bleech`}>{ text.contact.email.display }</HtmlLink>
+          <Link component="a" href={`mailto:${text.contact.email.display}`} color={`pencil`} hoverColor={`bleech`}>{ text.contact.email.display }</Link>
         </Text>
         <Button primary component={Link} to={`/contact`} bg={`ocean`} mt={2} icon="chat">{text.actions.contact}</Button>
       </Box>

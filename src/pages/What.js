@@ -41,7 +41,7 @@ export default () => (
           </Box>
           <Box width={[1, 2/3, 3/4, 4/5]}>
             <Heading level={2} mt={2} mb={2}>{ product.heading }</Heading>
-            <Text fontSize={3} mt={0}>{ product.body }</Text>
+            <Markdown fontSize={3} mt={0}>{ product.body }</Markdown>
           </Box>
         </Box>
       ))}
