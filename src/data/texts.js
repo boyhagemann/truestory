@@ -49,7 +49,7 @@ Omgeven door deze creatieve en ervaren vakmensen kan True Story Communicatie met
 
   philosophy: {
     heading: `True Story | Communicatie is een bureau voor communicatie en public relations`,
-    body: `Gestoeld op de kracht van verhalen, gespecialiseerd in tekst en redactie. Teksten om te verleiden, informeren of entertainen. Door hoofden te bereiken en harten te raken. En dat alles onder het motto: <em>Show, don’t yell</em>
+    body: `Gestoeld op de kracht van verhalen, gespecialiseerd in tekst en redactie. Teksten om te verleiden, informeren of entertainen. Door hoofden te bereiken en harten te raken. En dat alles onder het motto: *Show, don’t yell*.
 <br/><br/>
 Want schreeuwen is niet nodig om gezien te worden. U moet gewoon de juiste dingen zeggen, op het juiste moment en op de juiste plek.`
   },

@@ -11,7 +11,7 @@ export default () => (
       <MaxBox>
         <Box px={2} py={[2,4]}>
           <Heading level={3} mt={2} color={`bleech`}>{ text.philosophy.heading }</Heading>
-          <Markdown color={`bleech`} opacity={.5}>{ text.philosophy.body }</Markdown>
+          <Markdown color={`bleech`} opacity={.7}>{ text.philosophy.body }</Markdown>
         </Box>
       </MaxBox>
     </Box>
